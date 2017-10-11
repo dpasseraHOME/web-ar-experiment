@@ -8,6 +8,7 @@
 
         <link rel="stylesheet" href="assets/stylesheets/styles.css">
 
+        <script src="/assets/javascript/scripts.js"></script>
         <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/examples/vendor/aframe/build/aframe.min.js"></script>
         <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"></script>
 
@@ -30,9 +31,17 @@
 
         </a-scene> -->
 
-        <a-scene embedded artoolkit='sourceType: webcam;'>
-            <a-box position='0 0 0.5' material='opacity: 0.5;'></a-box>
+        <!-- <a-scene embedded artoolkit='sourceType: webcam;'>
+            <a-box position='0 0 0' material='opacity: 0.5;'></a-box>
             <a-marker-camera preset='hiro'></a-marker-camera>
+        </a-scene> -->
+
+        <a-scene embedded artoolkit='sourceType: webcam;'>
+            <a-marker preset='hiro'>
+                <a-box position='0 0.5 0' material='color: red;'></a-box>
+            </a-marker>
+
+            <a-entity camera id="camera" look-mode></a-entity>
         </a-scene>
 
     </body>
