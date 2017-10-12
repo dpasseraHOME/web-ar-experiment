@@ -55,8 +55,7 @@
 	}
 
 	window.addEventListener('load', function () {
-	    setInterval(checkForMarker, 50);
-	    console.log(document.getElementById('camera'));
+	    // setInterval(checkForMarker, 50);
 	}, false);
 
 /***/ }
